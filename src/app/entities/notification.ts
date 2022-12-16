@@ -1,4 +1,4 @@
-import { Replace } from 'src/helpers/replace';
+import { Replace } from '@helpers/replace';
 import { Content } from './content.vo';
 import { randomUUID } from 'node:crypto';
 
@@ -7,6 +7,7 @@ export interface NotificationProps {
   content: Content;
   category: string;
   readAt?: Date | null;
+  canceledAt?: Date | null;
   createdAt: Date;
 }
 
@@ -53,6 +54,14 @@ export class Notification {
 
   public get readAt(): Date | null | undefined {
     return this.props.readAt;
+  }
+
+  public cancel() {
+    this.props.canceledAt = new Date();
+  }
+
+  public get canceledAt(): Date | null | undefined {
+    return this.props.canceledAt;
   }
 
   public get createdAt(): Date {

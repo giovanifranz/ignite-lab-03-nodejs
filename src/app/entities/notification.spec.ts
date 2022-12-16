@@ -1,13 +1,8 @@
-import { Content } from './content.vo';
-import { Notification } from './notification';
+import { makeNotification } from '@test/factories/notification-factory';
 
 describe('Notification', () => {
   it('should be able to create a notification', () => {
-    const notification = new Notification({
-      content: new Content('Nova solicitação de amizade'),
-      category: 'social',
-      recipientId: 'example-recipient-id',
-    });
+    const notification = makeNotification();
     expect(notification).toBeTruthy();
   });
 });
