@@ -1,0 +1,16 @@
+GET http://localhost:3000/notifications HTTP/1.1
+
+###
+
+GET http://localhost:3000/notifications HTTP/1.1
+
+###
+
+POST http://localhost:3000/notifications HTTP/1.1
+content-type: application/json
+
+{
+  "recipientId": "7474945d-178a-461d-8765-72b4e9163a0e",
+  "content": "Teste",
+  "category": "teste"
+}
