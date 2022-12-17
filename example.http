@@ -9,7 +9,6 @@ content-type: application/json
 
 ###
 
-
 GET http://localhost:3000/notifications/from/7474945d-178a-461d-8765-72b4e9163a0e HTTP/1.1
 
 ###
